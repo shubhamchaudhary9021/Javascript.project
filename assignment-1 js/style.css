@@ -1,0 +1,220 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+    background: linear-gradient(135deg, #4facfe, #43e97b);
+    padding: 40px 60px;
+    color: #30364F;
+}
+
+/* ================= TITLE ================= */
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: white;
+}
+
+/* ================= TOP SECTION ================= */
+.top-section {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;   /* SAME HEIGHT */
+}
+
+/* ================= CARD BASE ================= */
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+/* LEFT SMALL */
+.card:first-child {
+    flex: 1;
+    max-width: 360px;
+}
+
+/* RIGHT BIG */
+.card:last-child {
+    flex: 2;
+}
+
+/* ================= CARD HEADINGS ================= */
+.card h2 {
+    margin-bottom: 20px;
+    color: #7253ff;
+}
+
+/* ================= FORM ================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border: 1px solid #6C4DF6;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* ================= BUTTONS ================= */
+.primary-btn,
+.secondary-btn {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background: linear-gradient(45deg, #6C4DF6, #4facfe);
+    color: white;
+}
+
+.primary-btn:hover {
+    transform: scale(1.03);
+    background: #d73d3d;
+    transition: 0.3s ease;
+}
+
+.secondary-btn {
+    background: #1b46f3;
+    color: white;
+    flex: 1;
+    padding: 14px 0;
+    transition: 0.3s ease;
+   
+}
+
+.secondary-btn:hover {
+    background: #d73d3d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* BUTTON GROUP */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* ================= EVENT CONTAINER ================= */
+#eventContainer {
+    flex: 1;              /* FILL HEIGHT */
+    margin-top: 10px;
+    overflow-y: auto;     /* Scroll if many events */
+}
+
+/* EMPTY STATE */
+.empty-state {
+    text-align: center;
+    opacity: 0.6;
+    margin-top: 50px;
+}
+
+/* ================= EVENT ITEM ================= */
+.event-item {
+    background: #f8f9fc;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    transition: 0.3s ease;
+    border-left: 5px solid #6C4DF6;
+}
+
+.event-item:hover {
+    transform: translateY(-3px);
+    background: #ffffff;
+}
+
+.event-title {
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+/* ================= DOM SECTION ================= */
+#demoContent {
+    margin-top: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+#demoBox {
+    background: f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 2px solid black;
+}
+#demoBox.hover {
+    background: #ffffff;
+    border: 2px solid #6C4DF6;
+    transform: scale(1.02);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .top-section {
+        flex-direction: column;
+    }
+
+    .card:first-child,
+    .card:last-child {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .secondary-btn,
+    .primary-btn {
+        width: 100%;
+    }
+}
