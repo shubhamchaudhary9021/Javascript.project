@@ -42,11 +42,16 @@ h1 {
 .card:first-child {
     flex: 1;
     max-width: 360px;
+    flex-shrink: 0;
+    max-height: 60vh;
 }
 
 /* RIGHT BIG */
 .card:last-child {
-    flex: 2;
+    flex: 1;
+    max-height: 80vh;
+    overflow-y: auto;
+
 }
 
 /* ================= CARD HEADINGS ================= */
@@ -191,7 +196,9 @@ textarea {
     border: 2px solid #6C4DF6;
     transform: scale(1.02);
 }
-
+#demoContent h2{
+    color: #1b46f3;
+}
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
 
@@ -217,4 +224,29 @@ textarea {
     .primary-btn {
         width: 100%;
     }
+}
+.event-card {
+    position: relative;
+    background: #f8f9fc;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    border-left: 5px solid #6C4DF6;
+    transition: 0.5s ease;
+    border-right:5px solid rgb(0, 106, 255);
+}
+.event-card:hover{
+    background-color: #22ff05;
+    transform: translateY(-3px);
+}
+
+.delete-btn {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: red;
 }
